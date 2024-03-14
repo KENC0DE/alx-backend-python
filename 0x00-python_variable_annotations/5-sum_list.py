@@ -2,9 +2,10 @@
 """
 Static Lists
 """
+from typing import List
 
 
-def sum_list(input_list: list[float]) -> float:
+def sum_list(input_list: List[float]) -> float:
     """
     input_list: given list of floats
     return: the sum of the list
