@@ -2,17 +2,17 @@
 """
 1. Let's execute multiple coroutines at the same time with async
 """
-import asyncio
+from typing import List
 wait_random = __import__('0-basic_async_syntax').wait_random
 
 
-async def wait_n(n: int, max_delay: int) -> list:
+async def wait_n(n: int, max_delay: int) -> List:
     """
     Running multiple random wiats
     """
-    delays: list = []
+    delays: List = []
     for _ in range(n):
-        delay = await wait_random(max_delay)
+        delay: float = await wait_random(max_delay)
         if delays == []:
             delays.append(delay)
         elif delay < delays[0]:
